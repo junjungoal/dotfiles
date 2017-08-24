@@ -1,0 +1,118 @@
+autocmd BufEnter * let &titlestring = ' ' . expand("%:t") " Update name of buffer to filename
+set title
+set exrc
+set secure
+
+set nohls " don't highlight search
+set nocursorline " don't highlight current line
+set cursorline
+
+set noswapfile " don't create swap files
+filetype plugin indent on
+
+" Ctrl-P search
+nnoremap <C-p> :Files<CR>
+" nnoremap <space>/ :Unite grep:.<cr>
+
+" Spaces and tabs
+set tabstop=4
+set softtabstop=4
+set backspace=2
+set shiftwidth=4
+set fileformat=unix
+
+" Setup color scheme
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+set t_Co=256
+set background=dark
+colorscheme base16-ocean
+
+" keyboard shortcuts
+inoremap jj <ESC>
+
+" reindent file
+map <leader>i mzgg=G`z<CR>
+
+nnoremap <D-c> "+y
+nnoremap <D-v> "+p
+
+" More natural splits
+set splitbelow          " Horizontal split below current.
+set splitright          " Vertical split to right of current.
+
+tnoremap <Esc> <C-\><C-n>
+
+" No hunks in airline (bottom row)
+let g:airline_enable_hunks = 0
+
+" Open file browser on start
+let g:nerdtree_tabs_open_on_console_startup=1
+let NERDTreeRespectWildIgnore=1
+
+
+" Syntastic options
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+
+" # ECMAScript
+let g:syntastic_enable_javascript_checker = 1
+let g:syntastic_javascript_checkers = ['eslint']
+
+" # typescript
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi']
+autocmd FileType typescript setlocal completeopt+=menu,preview
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+set laststatus=2
+
+" Tab through buffers
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprev<CR>
+
+" Git Gutter (by line numbers)
+let g:gitgutter_async = 0 " run synchronously
+
+" Haskell
+autocmd BufWritePost *.hs GhcModCheckAndLintAsync
+
+map <silent> tw :GhcModTypeInsert<CR>
+map <silent> ts :GhcModSplitFunCase<CR>
+map <silent> tq :GhcModType<CR>
+map <silent> te :GhcModTypeClear<CR>
+
+let g:haskell_tabular = 1
+vmap a= :Tabularize /=<CR>
+vmap a; :Tabularize /::<CR>
+vmap a- :Tabularize /-><CR>
+vmap a* :Tabularize /<\*><CR>
+
+let g:haskellmode_completion_ghc = 1
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+" FZF fuzzy text search mappings
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" Advanced customization using autoload functions
+inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '14%'})

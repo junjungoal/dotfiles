@@ -1,0 +1,51 @@
+" Base bundles
+Bundle 'gmarik/vundle'
+Bundle 'Shougo/vimproc.vim'
+
+" Search and utilities
+Bundle 'junegunn/fzf'
+Bundle 'junegunn/fzf.vim'
+Bundle 'tpope/vim-fugitive'
+
+" File browser
+Bundle 'scrooloose/nerdtree'
+Bundle 'Xuyuanp/nerdtree-git-plugin'
+Bundle 'octref/RootIgnore'
+
+" Appearance
+Plugin 'chriskempson/base16-vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'airblade/vim-gitgutter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" Syntax highlighting and auto-complete
+Bundle 'scrooloose/syntastic'
+Bundle 'Valloric/YouCompleteMe'
+
+" Text editing
+Bundle 'tpope/vim-surround'
+Bundle 'Townk/vim-autoclose'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'fuenor/JpFormat.vim'
+
+" Strip trailing whitespace
+Bundle 'ntpeters/vim-better-whitespace'
+
+" Haskell
+Bundle 'godlygeek/tabular'
+Bundle 'eagletmt/ghcmod-vim'
+Bundle 'Twinside/vim-hoogle'
+Bundle 'dag/vim2hs'
+
+" Scala
+Bundle 'derekwyatt/vim-scala'
+
+" search  file
+Bundle "ctrlpvim/ctrlp.vim"
+
+" Markdown
+Plugin 'gabrielelana/vim-markdown'
+
+" Java
+Plugin 'artur-shaik/vim-javacomplete2'
