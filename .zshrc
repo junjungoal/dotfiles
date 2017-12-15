@@ -18,9 +18,8 @@ export CLICOLOR=true
 export OPEN_CV="/usr/local/opt/opencv3/bin:$PATH"
 export CABAL_PATH=$PATH:~/.cabal/bin
  #Path to your oh-my-zsh installation.
-export ZSH=/Users/yamadajun/.oh-my-zsh
+export ZSH=/home/jun/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-plugins=(git ruby osx bundler brew rails emoji-clock)
 # User configuration
 
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -52,9 +51,6 @@ alias j="autojump"
 export ELASTICPATH=/usr/local/Cellar/elasticsearch/2.1.1/libexec/bin/plugin
 export PATH=$PATH:$ELASTICPATH
 
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
-fi
 
 ## general settings
 setopt auto_pushd
@@ -110,3 +106,8 @@ export CLICOLOR=1
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 #base16_ocean
+export WORKON_HOME=$HOME/.virtualenvs
+export PATH="/usr/local/cuda/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+
+source /usr/local/bin/virtualenvwrapper.sh
