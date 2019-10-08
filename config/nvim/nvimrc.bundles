@@ -1,7 +1,6 @@
 " Base bundles
 Bundle 'gmarik/vundle'
 Bundle 'Shougo/vimproc.vim'
-
 " Search and utilities
 Bundle 'junegunn/fzf'
 Bundle 'junegunn/fzf.vim'
@@ -20,8 +19,10 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 " Syntax highlighting and auto-complete
-Bundle 'scrooloose/syntastic'
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'w0rp/ale'
+Plugin 'Shougo/deoplete.nvim'
+Bundle 'sheerun/vim-polyglot'
+
 
 " Text editing
 Bundle 'tpope/vim-surround'
@@ -29,23 +30,47 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'fuenor/JpFormat.vim'
 
+
 " Strip trailing whitespace
 Bundle 'ntpeters/vim-better-whitespace'
 
 " Haskell
-Bundle 'godlygeek/tabular'
-Bundle 'eagletmt/ghcmod-vim'
+Bundle 'eagletmt/neco-ghc'
 Bundle 'Twinside/vim-hoogle'
-Bundle 'dag/vim2hs'
-
-" Scala
-Bundle 'derekwyatt/vim-scala'
+Plugin 'parsonsmatt/intero-neovim'
 
 " search  file
 Bundle "ctrlpvim/ctrlp.vim"
 
+" Javascript
+Plugin 'jelera/vim-javascript-syntax'
+
 " Markdown
-Plugin 'gabrielelana/vim-markdown'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'KeitaNakamura/tex-conceal.vim'
+Plugin 'kannokanno/previm'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
 " Java
 Plugin 'artur-shaik/vim-javacomplete2'
+
+
+"html
+Plugin 'alvan/vim-closetag'
+
+"vue
+Plugin 'posva/vim-vue'
+Plugin 'mhartington/nvim-typescript'
+
+"scss
+Plugin 'cakebaker/scss-syntax.vim'
+
+"Tex
+Plugin 'lervag/vimtex'
+
+Plugin 'sirver/ultisnips'
+Plugin 'honza/vim-snippets'
+
+"indent
+Plugin 'Yggdroot/indentLine'

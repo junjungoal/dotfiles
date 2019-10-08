@@ -212,7 +212,7 @@ set background=dark
 
 exe "set rtp+=".globpath($GOPATH, 'src/github.com/nsf/gocode/vim')
 "colorscheme solarized
-"let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_functions = 1
@@ -230,4 +230,4 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 let g:syntastic_go_checkers = ['go', 'golint']
 "setting for markdown
 au BufRead,BufNewFile *.md set filetype=markdown
-
+let g:solarized_termcolors=256
