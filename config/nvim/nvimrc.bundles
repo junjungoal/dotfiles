@@ -13,7 +13,7 @@ Bundle 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'octref/RootIgnore'
 
 " Appearance
-Plugin 'chriskempson/base16-vim'
+Plugin 'KeitaNakamura/neodark.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'

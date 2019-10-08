@@ -18,12 +18,11 @@ export CLICOLOR=true
 export OPEN_CV="/usr/local/opt/opencv3/bin:$PATH"
 export CABAL_PATH=$PATH:~/.cabal/bin
  #Path to your oh-my-zsh installation.
-export ZSH=/Users/junyamada/.oh-my-zsh
+export ZSH=/home/ubuntu/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-plugins=(git ruby osx bundler brew rails emoji-clock)
+export BAZEL=$HOME/bin
 # User configuration
 
-export PATH=$HOME/.nodebrew/current/bin:$PATH
 #alias
 alias pandoc_ja="(){iconv -f UTF-8-MAC -t UTF-8  $1 | pandoc -f markdown -o  $2 -V documentclass=ltjarticle --latex-engine=lualatex}"
 alias be="bundle exec"
@@ -51,10 +50,6 @@ alias mvim="/Applications/MacVim.app/Contents/MacOS/mvim"
 alias j="autojump"
 export ELASTICPATH=/usr/local/Cellar/elasticsearch/2.1.1/libexec/bin/plugin
 export PATH=$PATH:$ELASTICPATH
-
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
-fi
 
 ## general settings
 setopt auto_pushd
@@ -111,8 +106,9 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 #base16_ocean
 let base16colorspace=256
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /usr/local/bin/virtualenvwrapper.sh
+source /home/ubuntu/anaconda3/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/.virtualenvs
 
 title() { export TITLE_OVERRIDDEN=1; echo -en "\e]0;$*\a"}
@@ -140,3 +136,26 @@ tabtitle_preexec() {
 }
 [[ -z $preexec_functions ]] && preexec_functions=()
 preexec_functions=($preexec_functions tabtitle_preexec)
+export PATH=/usr/local/cuda/bin:/usr/local/bin:/opt/aws/bin:/home/ubuntu/src/cntk/bin:/usr/local/mpi/bin:$PATH
+export LD_LIBRARY_PATH=/home/ubuntu/src/cntk/bindings/python/cntk/libs:/usr/local/cuda/lib64:/usr/local/lib:/usr/lib:/usr/local/cuda/extras/CUPTI/lib64:/usr/local/mpi/lib:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
+export PYTHONPATH=/home/ubuntu/src/cntk/bindings/python
+if [ -e /usr/lib/libmpi_cxx.so ]; then
+  export LD_PRELOAD=/usr/lib/libmpi_cxx.so
+fi
+export PATH=/usr/local/cuda/bin:/usr/local/bin:/opt/aws/bin:/usr/local/mpi/bin:$PATH
+export LD_LIBRARY_PATH_WITH_DEFAULT_CUDA=/usr/lib64/openmpi/lib/:/usr/local/cuda/lib64:/usr/local/lib:/usr/lib:/usr/local/cuda/extras/CUPTI/lib64:/usr/local/mpi/lib:/lib/:/lib/nccl/cuda-10.1/lib/:$LD_LIBRARY_PATH_WITH_DEFAULT_CUDA
+export LD_LIBRARY_PATH_WITHOUT_CUDA=/usr/lib64/openmpi/lib/:/usr/local/lib:/usr/lib:/usr/local/mpi/lib:/lib/:$LD_LIBRARY_PATH_WITHOUT_CUDA
+export LD_LIBRARY_PATH=/usr/lib64/openmpi/lib/:/usr/local/cuda/lib64:/usr/local/lib:/usr/lib:/usr/local/cuda/extras/CUPTI/lib64:/usr/local/mpi/lib:/lib/:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
+export PATH=$HOME/anaconda3/bin/:$PATH
+export LIBFM_PATH=/home/ubuntu/libfm/bin/
+export LD_LIBRARY_PATH=$HOME/.mujoco/mjpro150/bin:$LD_LIBRARY_PATH
+export PYTHONPATH=$HOME/projects/mfrl/examples/battle_model/python:$PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-10.1/lib64/
+export LD_LIBRARY_PATH=/root/.mujoco/mujoco200/bin:$LD_LIBRARY_PATH
+export PATH=$PATH:/usr/local/cuda/bin
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64
+export CUDA_PATH=/usr/local/cuda-10.1
+export MUJOCO_PY_MJPRO_PATH=~/.mujoco/mjpro131
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ubuntu/.mujoco/mjpro150/bin
