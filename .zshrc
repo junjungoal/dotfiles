@@ -21,11 +21,8 @@ ZSH_THEME="robbyrussell"
 export BAZEL=$HOME/bin
 # User configuration
 
-<<<<<<< HEAD
-=======
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=$HOME/.nodebrew/node/v9.8.0/bin:$PATH
->>>>>>> c4df4a17af4a3ba90547c8405edb9fe4fafd99fd
 #alias
 alias pandoc_ja="(){iconv -f UTF-8-MAC -t UTF-8  $1 | pandoc -f markdown -o  $2 -V documentclass=ltjarticle --latex-engine=lualatex}"
 alias be="bundle exec"
