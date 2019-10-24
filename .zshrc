@@ -16,7 +16,7 @@ export CLICOLOR=true
 export OPEN_CV="/usr/local/opt/opencv3/bin:$PATH"
 export PATH=$HOME/.local/bin/:$PATH
  #Path to your oh-my-zsh installation.
-export ZSH=/home/ubuntu/.oh-my-zsh
+export ZSH=/home/jun/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 export BAZEL=$HOME/bin
 # User configuration
@@ -131,7 +131,7 @@ alias julia=/usr/local/bin/julia
 let base16colorspace=256
 #source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 #source /usr/local/bin/virtualenvwrapper.sh
-source /home/ubuntu/anaconda3/bin/virtualenvwrapper.sh
+#source /home/ubuntu/anaconda3/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/.virtualenvs
 
 title() { export TITLE_OVERRIDDEN=1; echo -en "\e]0;$*\a"}
