@@ -16,7 +16,7 @@ export CLICOLOR=true
 export OPEN_CV="/usr/local/opt/opencv3/bin:$PATH"
 export PATH=$HOME/.local/bin/:$PATH
  #Path to your oh-my-zsh installation.
-export ZSH=/Users/yamadajun/.oh-my-zsh
+export ZSH=/root/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 plugins=(git ruby osx bundler brew rails emoji-clock)
 # User configuration
