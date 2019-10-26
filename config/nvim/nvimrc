@@ -10,7 +10,7 @@ filetype on " without this vim emits a zero exit status, later, because of :ft o
 filetype off
 let vimDir = '$HOME/.config/nvim'
 " let &runtimepath .=',' . expand(vimDir . '/bundle/Vundle.vim')
-set rtp+=~/.config/bundle/Vundle.vim/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc(expand($HOME.'/.config/nvim/bundle'))
 
 " install Vundle bundles
