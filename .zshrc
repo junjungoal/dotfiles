@@ -115,11 +115,11 @@ export OPENNI2_INCLUDE=/usr/local/include/ni2
 export OPENNI2_REDIST=/usr/local/lib/ni2
 export PATH=/usr/local/opt/openssl/bin:$PATH
 export PATH="/usr/local/ghc-7.10.2/bin:$PATH"
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
+if [ -f $HOME/.local/bin/virtualenvwrapper.sh ]; then
   export WORKON_HOME=$HOME/.virtualenvs
-  source /usr/local/bin/virtualenvwrapper.sh
+  source $HOME/.local/bin/virtualenvwrapper.sh
 fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -181,4 +181,15 @@ export PATH=$PATH:/usr/local/cuda/bin
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 export CUDA_PATH=/usr/local/cuda-10.1
 export MUJOCO_PY_MJPRO_PATH=~/.mujoco/mjpro131
+export MUJOCO_PY_MJKEY_PATH=~/.mujoco/mjkey.txt
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ubuntu/.mujoco/mjpro150/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/jun/.mujoco/mujoco200/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia-418
+export PROMPT_COMMAND="echo -ne '\033]0;${USER}@${HOST}\007';$PROMPT_COMMAND"
+precmd() { eval "$PROMPT_COMMAND" }
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/jun/google-cloud-sdk/path.zsh.inc' ]; then . '/home/jun/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/jun/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/jun/google-cloud-sdk/completion.zsh.inc'; fi
