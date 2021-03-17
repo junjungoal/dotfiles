@@ -16,12 +16,13 @@ export CLICOLOR=true
 export OPEN_CV="/usr/local/opt/opencv3/bin:$PATH"
 export PATH=$HOME/.local/bin/:$PATH
  #Path to your oh-my-zsh installation.
-export ZSH=/home/jun/.oh-my-zsh
+export ZSH=/Users/jun.yamada/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 export BAZEL=$HOME/bin
 # User configuration
 
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+# export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=/usr/local/opt/python/libexec/bin:/Users/jun.yamada/.nodebrew/current/bin:$PATH
 export PATH=$HOME/.nodebrew/node/v9.8.0/bin:$PATH
 #alias
 alias pandoc_ja="(){iconv -f UTF-8-MAC -t UTF-8  $1 | pandoc -f markdown -o  $2 -V documentclass=ltjarticle --latex-engine=lualatex}"
@@ -115,11 +116,11 @@ export OPENNI2_INCLUDE=/usr/local/include/ni2
 export OPENNI2_REDIST=/usr/local/lib/ni2
 export PATH=/usr/local/opt/openssl/bin:$PATH
 export PATH="/usr/local/ghc-7.10.2/bin:$PATH"
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
-export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
-if [ -f $HOME/.local/bin/virtualenvwrapper.sh ]; then
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
   export WORKON_HOME=$HOME/.virtualenvs
-  source $HOME/.local/bin/virtualenvwrapper.sh
+  source /usr/local/bin/virtualenvwrapper.sh
 fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -180,10 +181,11 @@ export LD_LIBRARY_PATH=/root/.mujoco/mujoco200/bin:$LD_LIBRARY_PATH
 export PATH=$PATH:/usr/local/cuda/bin
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 export CUDA_PATH=/usr/local/cuda-10.1
-export MUJOCO_PY_MJPRO_PATH=~/.mujoco/mjpro131
+export MUJOCO_PY_MUJOCO_PATH=~/.mujoco/mujoco200
 export MUJOCO_PY_MJKEY_PATH=~/.mujoco/mjkey.txt
+# export MUJOCO_PY_MJKEY_PATH=/Users/jun.yamada/.mujoco/mjkey.txt
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ubuntu/.mujoco/mjpro150/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/jun/.mujoco/mujoco200/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Users/jun.yamada/.mujoco/mujoco200/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia-418
 export PROMPT_COMMAND="echo -ne '\033]0;${USER}@${HOST}\007';$PROMPT_COMMAND"
 precmd() { eval "$PROMPT_COMMAND" }
@@ -193,3 +195,4 @@ if [ -f '/home/jun/google-cloud-sdk/path.zsh.inc' ]; then . '/home/jun/google-cl
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/jun/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/jun/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/python@3.7/bin:$PATH"
