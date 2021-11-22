@@ -13,7 +13,7 @@ export CLICOLOR=true
 export OPEN_CV="/usr/local/opt/opencv3/bin:$PATH"
 export PATH=$HOME/.local/bin/:$PATH
  #Path to your oh-my-zsh installation.
-export ZSH=/home/jun/.oh-my-zsh
+export ZSH=/home/jyamada/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 export BAZEL=$HOME/bin
 # User configuration
@@ -79,10 +79,10 @@ export OPENNI2_REDIST=/usr/local/lib/ni2
 export PATH=/usr/local/opt/openssl/bin:$PATH
 export PATH="/usr/local/ghc-7.10.2/bin:$PATH"
 export VIRTUALENVWRAPPER_PYTHON=`which python3`
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
+if [ -f $HOME/.local/bin/virtualenvwrapper.sh ]; then
   export WORKON_HOME=$HOME/.virtualenvs
-  source /usr/local/bin/virtualenvwrapper.sh
+  source $HOME/.local/bin/virtualenvwrapper.sh
 fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -132,8 +132,29 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 # export PATH=$PATH:/usr/local/cuda/bin
 # export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 # export CUDA_PATH=/usr/local/cuda-10.1
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/jun/.mujoco/mujoco210/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/jyamada/.mujoco/mujoco210/bin
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia-418
 export PROMPT_COMMAND="echo -ne '\033]0;${USER}@${HOST}\007';$PROMPT_COMMAND"
 precmd() { eval "$PROMPT_COMMAND" }
+source /opt/ros/melodic/setup.zsh
+source ~/catkin_ws/devel/setup.zsh
+export PATH="$HOME/neovim/bin:$PATH"
+export ROS_MASTER_URI=http://bamboo:11311
+export ROS_IP=192.168.4.3
+export PATH=$HOME/miniconda3/bin:$PATH
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/jyamada/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/jyamada/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jyamada/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/jyamada/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
