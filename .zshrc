@@ -13,7 +13,7 @@ export CLICOLOR=true
 export OPEN_CV="/usr/local/opt/opencv3/bin:$PATH"
 export PATH=$HOME/.local/bin/:$PATH
  #Path to your oh-my-zsh installation.
-export ZSH=/home/jyamada/.oh-my-zsh
+export ZSH=/home/${USER}/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 export BAZEL=$HOME/bin
 # User configuration
