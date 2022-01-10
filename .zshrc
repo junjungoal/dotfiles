@@ -80,9 +80,9 @@ export PATH=/usr/local/opt/openssl/bin:$PATH
 export PATH="/usr/local/ghc-7.10.2/bin:$PATH"
 export VIRTUALENVWRAPPER_PYTHON=`which python3`
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
-if [ -f $HOME/.local/bin/virtualenvwrapper.sh ]; then
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
   export WORKON_HOME=$HOME/.virtualenvs
-  source $HOME/.local/bin/virtualenvwrapper.sh
+  source /usr/local/bin/virtualenvwrapper.sh
 fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -133,9 +133,25 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 # export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 # export CUDA_PATH=/usr/local/cuda-10.1
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/$USER/.mujoco/mujoco210/bin
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia-418
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/$USER/.mujoco/mujoco200/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
+export MUJOCO_PY_MUJOCO_PATH=~/.mujoco/mujoco200
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia-418
 export PROMPT_COMMAND="echo -ne '\033]0;${USER}@${HOST}\007';$PROMPT_COMMAND"
 precmd() { eval "$PROMPT_COMMAND" }
 export PATH="$HOME/neovim/bin:$PATH"
-export ROS_MASTER_URI=http://bamboo:11311
-export ROS_IP=192.168.4.3
+# export ROS_MASTER_URI=http://bamboo:11311
+# export ROS_IP=192.168.4.3
+#
+#export PYTHONPATH=$HOME/projects/mfrl/examples/battle_model/python:$PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.3/lib64/
+export PATH=$PATH:/usr/local/cuda/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+export CUDA_PATH=/usr/local/cuda-11.3
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia-418
+
+source /opt/ros/noetic/setup.zsh
+source ~/catkin_ws/devel/setup.zsh
+
+# export ROS_MASTER_URI=http://192.168.4.2:11311
+# export ROS_IP=192.168.4.10
