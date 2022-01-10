@@ -150,8 +150,8 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
 export CUDA_PATH=/usr/local/cuda-11.3
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia-418
 
-source /opt/ros/noetic/setup.zsh
-source ~/catkin_ws/devel/setup.zsh
+# source /opt/ros/noetic/setup.zsh
+# source ~/catkin_ws/devel/setup.zsh
 
 # export ROS_MASTER_URI=http://192.168.4.2:11311
 # export ROS_IP=192.168.4.10
