@@ -126,32 +126,23 @@ if [ -e /usr/lib/libmpi_cxx.so ]; then
 fi
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 export PATH=$HOME/anaconda3/bin/:$PATH
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-10.1/lib64/
-export PATH="/usr/local/cuda/bin:$PATH"
-export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
-# export PATH=$PATH:/usr/local/cuda/bin
-# export LD_LIBRARY_PATH=/usr/local/cuda/lib64
-# export CUDA_PATH=/usr/local/cuda-10.1
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/$USER/.mujoco/mujoco210/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/$USER/.mujoco/mujoco200/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
-export MUJOCO_PY_MUJOCO_PATH=~/.mujoco/mujoco200
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia-418
 export PROMPT_COMMAND="echo -ne '\033]0;${USER}@${HOST}\007';$PROMPT_COMMAND"
 precmd() { eval "$PROMPT_COMMAND" }
 export PATH="$HOME/neovim/bin:$PATH"
-# export ROS_MASTER_URI=http://bamboo:11311
-# export ROS_IP=192.168.4.3
-#
-#export PYTHONPATH=$HOME/projects/mfrl/examples/battle_model/python:$PATH
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.3/lib64/
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/
 export PATH=$PATH:/usr/local/cuda/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
-export CUDA_PATH=/usr/local/cuda-11.3
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia-418
+export CUDA_PATH=/usr/local/cuda
 
-# source /opt/ros/noetic/setup.zsh
-# source ~/catkin_ws/devel/setup.zsh
+source /opt/ros/noetic/setup.zsh
+source ~/catkin_ws/devel/setup.zsh
 
-# export ROS_MASTER_URI=http://192.168.4.2:11311
-# export ROS_IP=192.168.4.10
+# export COPPELIASIM_ROOT=/home/jun/projects/CoppeliaSim
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$COPPELIASIM_ROOT
+# export QT_QPA_PLATFORM_PLUGIN_PATH=$COPPELIASIM_ROOT
+
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=${HOME}/go
+export PATH=$PATH:$HOME/bin
