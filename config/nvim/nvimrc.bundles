@@ -69,11 +69,8 @@ Plugin 'cakebaker/scss-syntax.vim'
 "Tex
 Plugin 'lervag/vimtex'
 
-<<<<<<< HEAD
-" Plugin 'sirver/ultisnips'
-=======
+
 "Plugin 'sirver/ultisnips'
->>>>>>> 56862c28e5d809c68f29ce6ca07e218ad16c9d44
 Plugin 'honza/vim-snippets'
 
 "indent
