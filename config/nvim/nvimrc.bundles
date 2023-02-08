@@ -75,3 +75,6 @@ Plugin 'honza/vim-snippets'
 
 "indent
 Plugin 'Yggdroot/indentLine'
+
+"Split Term
+Plugin 'vimlab/split-term.vim'
