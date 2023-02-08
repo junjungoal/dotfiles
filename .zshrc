@@ -146,3 +146,5 @@ source ~/catkin_ws/devel/setup.zsh
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=${HOME}/go
 export PATH=$PATH:$HOME/bin
+
+export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
